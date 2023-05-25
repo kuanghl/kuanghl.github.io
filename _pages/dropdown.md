@@ -8,6 +8,7 @@ children:
     - title: publications
       permalink: /publications/
     - title: divider
+      permalink: /projects/
     - title: projects
       permalink: /projects/
 ---
