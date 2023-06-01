@@ -1,5 +1,6 @@
 ---
-title: Jekyll+模板，搭建个人博客：撰写博客
+title: blogs_demo_test
+# title: Jekyll+模板，搭建个人博客：撰写博客
 
 date: 2023-06-01 12:39:00 +0800
 
