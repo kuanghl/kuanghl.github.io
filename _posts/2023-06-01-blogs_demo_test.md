@@ -7,7 +7,8 @@ tags: [google analytics, pageviews]
 comments: true
 
 # 其他还有：
-description: this is a demo. # 描述
+# description: this is a demo. # 描述
+description: 
 author:  # 作者信息
   name: kuanghongliang
   link: https://github.com/kuanghl/
