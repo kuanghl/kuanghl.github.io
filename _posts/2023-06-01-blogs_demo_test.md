@@ -1,21 +1,17 @@
 ---
 title: Blogs Demo Test View
-# title: Jekyll+模板，搭建个人博客：撰写博客
+author: kuang_hl 
 date: 2023-06-01 12:39:00 +0800
 categories: [Blogging, Tutorial]
 tags: [google analytics, pageviews]
 comments: true
 
 # 其他还有：
-# description: this is a demo. # 描述
-description: 
-author:  # 作者信息
-  name: kuanghongliang
-  link: https://github.com/kuanghl/
+description: this is a demo. # 描述
 toc: true # 打开目录
 math: true # 加载数学功能
 mermaid: true # 启用Mermaid
-# pin: true # 置顶帖子
+pin: true # 置顶帖子
 ---
 
 ## 标题.
