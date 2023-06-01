@@ -1,13 +1,9 @@
 ---
-title: blogs_demo_test
+title: Blogs Demo Test View
 # title: Jekyll+模板，搭建个人博客：撰写博客
-
 date: 2023-06-01 12:39:00 +0800
-
-categories: [web, jekyll] 
-
-tags: [web, jekyll]
-
+categories: [Blogging, Tutorial]
+tags: [google analytics, pageviews]
 comments: true
 
 # 其他还有：
