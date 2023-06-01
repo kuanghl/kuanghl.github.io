@@ -23,3 +23,7 @@ platforms:
   - type: Weibo
     icon: "fab fa-weibo"
     link: "http://service.weibo.com/share/share.php?title=TITLE&url=URL"
+
+  - type: Weixin
+    icon: "fab fa-wexin"
+    link: "weixin://dl/moments"
