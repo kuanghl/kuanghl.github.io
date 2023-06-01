@@ -8,13 +8,13 @@ comments: true
 
 # 其他还有：
 description: this is a demo. # 描述
-author: JNN # 作者信息
-  name: kuanghl
-  link: https://example.com
-toc: true # 关闭目录
+author:  # 作者信息
+  name: kuanghongliang
+  link: https://github.com/kuanghl/
+toc: true # 打开目录
 math: true # 加载数学功能
 mermaid: true # 启用Mermaid
-pin: true # 置顶帖子
+# pin: true # 置顶帖子
 ---
 
 ## 标题.
