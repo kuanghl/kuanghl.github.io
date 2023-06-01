@@ -1,4 +1,4 @@
-name: "Build and Deploy"
+name: "jekyll-theme-chirpy Build and Deploy"
 on:
   push:
     branches:
