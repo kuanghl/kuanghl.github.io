@@ -1,5 +1,5 @@
 ---
-title: Jekyll+模板，搭建个人博客（三）：撰写博客
+title: Jekyll+模板，搭建个人博客：撰写博客
 
 date: 2023-06-01 12:39:00 +0800
 
@@ -7,7 +7,7 @@ categories: [web, jekyll]
 
 tags: [web, jekyll]
 
-comments: false
+comments: true
 
 # 其他还有：
 description: this is a demo. # 描述
@@ -73,12 +73,11 @@ Moon
 ## 代码.
 ```md
 # 代码块
-```python
+\```python
 print("hello world")
-```
+\```
 # 内联代码，一般写在正文中
 `hello，world!`
-```
 ```
 
 ## 表格.
@@ -139,15 +138,14 @@ $$
 ## Mermaid.
 ```md
 # 横向流程图
-```mermaid
+\```mermaid
 graph LR
 A[方形] -->B(圆角)
     B --> C{条件a}
     C -->|a=1| D[结果1]
     C -->|a=2| E[结果2]
     F[横向流程图]
-```
-```
+\```
 ```
 
 ## other.
