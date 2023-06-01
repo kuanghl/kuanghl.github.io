@@ -1,9 +1,10 @@
 ---
 title: Enable Google Page Views
-author: sille_bille
+authors: [sille_bille, kuang_hl]
 date: 2021-01-03 18:32:00 +0800
 categories: [Blogging, Tutorial]
 tags: [google analytics, pageviews]
+toc: true
 ---
 
 > The content of this post applies only to [_Universal Analytics property_](https://support.google.com/analytics/answer/10220206) (UA), not [_Google Analytics 4_](https://support.google.com/analytics/answer/10089681) (GA 4). In addition, since [UA is about to be deprecated on Jul 1, 2023](https://support.google.com/analytics/answer/11583528), the Page Views feature of [_Chirpy_][chirpy-homepage] will also be deprecated at that time.
@@ -241,3 +242,12 @@ Now, you should see the Page View enabled on your blog.
 [^ga-filters]: [Google Analytics Core Reporting API: Filters](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#filters)
 
 [chirpy-homepage]: https://github.com/cotes2020/jekyll-theme-chirpy/
+
+<script src="https://utteranc.es/client.js"
+        repo="kuanghl/kuanghl.github.io"
+        issue-term="og:title"
+        label="blog_comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
