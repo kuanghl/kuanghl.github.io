@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - master
+      - jekyll-theme-chirpy
     paths-ignore:
       - .gitignore
       - README.md
