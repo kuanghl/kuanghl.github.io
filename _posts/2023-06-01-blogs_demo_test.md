@@ -146,10 +146,26 @@ A[方形] -->B(圆角)
 ```md
 喜欢 <kbd>Ctrl</kbd> music～
 ```
+<!--
 <meting-js
 	server="netease"
 	type="playlist"
 	id="60198">
 </meting-js>
+-->
+<meting-js 
+	server="netease" 
+	type="playlist" 
+	id="5393777464"
+	fixed="true" 
+	autoplay="true"
+	loop="all"
+	order="random"
+	preload="auto"
+	list-folded="ture"
+	lrc-type="1"
+	mutex="true">
+</meting-js>
+
 
 [more detail ref](http://jekyllcn.com/docs/posts/)
