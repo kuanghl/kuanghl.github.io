@@ -16,7 +16,7 @@ pin: true # 置顶帖子
 
 - Upgrade the fork.
   
-```sh
+```shell
 # 0.备份master分支
 # 1.创建和切换分支master_copy
 # 2.链接远端分叉仓库
