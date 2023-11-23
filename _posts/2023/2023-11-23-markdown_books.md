@@ -24,4 +24,4 @@ pin: true # 置顶帖子
     
 - [ ] mdbooks.
 
-!!! Note 页面不刷新的情况: 按下Ctrl + F5刷新页面缓存。
+> 页面不刷新的情况: 按下Ctrl + F5刷新页面缓存。{: .prompt-danger }
