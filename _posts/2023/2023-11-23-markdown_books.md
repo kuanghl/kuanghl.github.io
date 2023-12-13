@@ -23,6 +23,7 @@ pin: true # 置顶帖子
   - 仓库的GitHub Actions流程中查看部署的网址
     
 - [x] mdbooks.
+  - 后续环境不需要再次安装，pdf导出网络端和本地端有区别。
 
 ```sh
 sudo apt-get install cargo
