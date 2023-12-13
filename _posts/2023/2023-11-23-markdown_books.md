@@ -21,6 +21,27 @@ pin: true # 置顶帖子
   - 克隆项目[mkdocs-material-demo](https://github.com/kuanghl/mkdocs-material-demo.git)
   - 待仓库的GitHub Actions执行完毕后，进入仓库配置`Setting --> Pages --> Build and deployment`，选择`Deploy from a branch --> gh-pages --> Save`。
   - 仓库的GitHub Actions流程中查看部署的网址
+
+```sh
+pip install mkdocs-material
+# pip install mkdocs-exporter
+# pip3 install mkpdfs-mkdocs
+# pip3 install mkdocs-macros-plugin
+# pip3 install mdx_truly_sane_lists
+# pip install WeasyPrint
+
+# pip install mkdocs-awesome-pages-plugin
+# pip install mkdocs-redirects
+# pip install mkdocs-minify-plugin
+# python -m playwright install
+# python -m playwright install --with-deps
+# pip install poetry
+
+# test
+mkdocs serve
+mkdocs build
+```
+
     
 - [x] mdbooks.
   - 后续环境不需要再次安装，pdf导出网络端和本地端有区别。
