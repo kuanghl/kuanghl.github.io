@@ -62,4 +62,7 @@ git push -f origin master
 git merge -X theirs chirpy --allow-unrelated-histories
 # 合并chirpy分支到当前分支,如果有冲突保留当前分支更改
 git merge -X ours chirpy --allow-unrelated-histories
+
+# assets/lib commit id
+97d95fd
 ```
