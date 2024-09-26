@@ -31,7 +31,7 @@ git checkout -b master_copy
 git remote add origin_chirpy git@github.com:cotes2020/jekyll-theme-chirpy.git
 git fetch origin_chirpy
 git checkout -b chirpy origin_chirpy/master
-bash tools/init
+bash tools/init #  7.1.1 error
 git diff master chirpy --stat
 git diff master chirpy _config.yml
 git checkout master
