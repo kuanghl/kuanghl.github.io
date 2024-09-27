@@ -31,7 +31,7 @@ git checkout -b master_copy
 git remote add origin_chirpy git@github.com:cotes2020/jekyll-theme-chirpy.git
 git fetch origin_chirpy
 git checkout -b chirpy origin_chirpy/master
-bash tools/init #  7.1.1 error
+bash tools/init #  7.1.1 error所以以下更新需要配合build
 git diff master chirpy --stat
 git diff master chirpy _config.yml
 git checkout master
@@ -65,29 +65,101 @@ git merge -X ours chirpy --allow-unrelated-histories
 
 # assets/lib commit id
 97d95fd
+```
 
-# build
+- build.
+
+#### windows
+
+```sh
+# https://mp.weixin.qq.com/s/XAj-3NGsAvmPfcYIasZ2fA
+# https://jekyllrb.com/docs/installation/windows/
+# https://rubyinstaller.org/downloads/
+# https://nodejs.org/en/download/prebuilt-installer
+# 1. 下载安装
+Ruby+Devkit x.x.x-x64
+MSYS2 and MINGW development toolchain
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/ # 更换中国源
+gem install jekyll bundler # 使用Powershell jekyll bundler
+jekyll -v  # 验证
+node-vx.x.x-x64.msi
+node -v # 验证
+npm -v # 验证
+npm config set registry https://registry.npmmirror.com  # 切换淘宝源镜像
+
+# 2. build
+git clone git@github.com:cotes2020/jekyll-theme-chirpy.git
+bundle
+npm i 
+npm run build # assets
+# 从Gemfile中删除gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
+# 在_config.yml最后添加port: 4001
+bundle exec jekyll s
+
+# 3. new
+#首先创建一个c:\work的目录，然后前往这个目录。
+cd c:\work
+#用jekyll初始化博客站点kukisama.github.io，在做这个操作之前，要提前用VScode将整个kukisama.github.io拉回来，也就是说，kukisama.github.io目录是实际存在的。
+jekyll new kukisama.github.io
+#前往这个目录
+cd kukisama.github.io
+#将这个目录变成可用的http站点，直接访问下面的地址即可看到实际效果
+#http://localhost:4000
+bundle exec jekyll serve
+
+# 如果系统是Ruby 3.0.0，且发现服务器起不来，输入这条命令
+# bundle 本身会在各种回显上进行提示，如果有报错，注意看下错误信息中关于bundle 的内容，按照提示可以修复错误。
+bundle add webrick
+#因为本身Jekyll是个代码生成器，修改MD并不是立刻映射到html文件上。
+#可以用这条命令启动服务，这样文件被改变之后，会即刻刷新网页
+bundle exec jekyll serve --livereload
+```
+
+#### ubuntu
+
+```sh
+# 1. install ruby3.3.5
 sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm list known
 rvm install ruby-3.3.5
 gem uninstall -i /home/kuanghl/.rvm/rubies/ruby-3.3.5/lib/ruby/gems/3.3.0 gem-wrappers
+
+# 2. install node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install 20.10.0
 node -v
-sudo apt-get install ruby-full build-essential zlib1g-dev
-gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+sudo apt-get install build-essential zlib1g-dev
+
+# 3. install jekyll 
+source ~/.rvm/scripts/rvm # 启动ruby
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/ # 切换中国源
 gem sources -l
 gem install jekyll bundler # sudo apt install jekyll
 
+# 4. build jekyll-theme-chirpy
+source ~/.rvm/scripts/rvm # 启动ruby
 git clone git@github.com:cotes2020/jekyll-theme-chirpy.git
-source ~/.rvm/scripts/rvm
 bundle
 git config  user.email "kuanghl1998@163.com"
 git config  user.name "kuanghl"
+npm config set proxy null
+npm config set registry https://registry.npmmirror.com  # 切换淘宝源镜像
 bash tools/init.sh
+npm i && npm run build # assets
 bundle exec jekyll s
+# 在_config.yml最后添加port: 4001
 sudo lsof -wni tcp:4000 # 将4000端口占用的进程重新配置一下其他端口
+
+# 5. upgrade
+# 拷贝_posts文件到初始化完成的jekyll-theme-chirpy
+# 比对_config.yml和pages-deploy.yml,合并更改即可完成更新
+
+# 6. new
+jekyll new test.github.io
+cd test.github.io
+bundle install
+bundle exec jekyll s
 ```
