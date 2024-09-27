@@ -65,4 +65,29 @@ git merge -X ours chirpy --allow-unrelated-histories
 
 # assets/lib commit id
 97d95fd
+
+# build
+sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm list known
+rvm install ruby-3.3.5
+gem uninstall -i /home/kuanghl/.rvm/rubies/ruby-3.3.5/lib/ruby/gems/3.3.0 gem-wrappers
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install 20.10.0
+node -v
+sudo apt-get install ruby-full build-essential zlib1g-dev
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+gem sources -l
+gem install jekyll bundler # sudo apt install jekyll
+
+git clone git@github.com:cotes2020/jekyll-theme-chirpy.git
+source ~/.rvm/scripts/rvm
+bundle
+git config  user.email "kuanghl1998@163.com"
+git config  user.name "kuanghl"
+bash tools/init.sh
+bundle exec jekyll s
+sudo lsof -wni tcp:4000 # 将4000端口占用的进程重新配置一下其他端口
 ```
