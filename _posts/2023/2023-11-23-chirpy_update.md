@@ -80,7 +80,7 @@ git merge -X ours chirpy --allow-unrelated-histories
 Ruby+Devkit x.x.x-x64
 MSYS2 and MINGW development toolchain
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/ # 更换中国源
-gem install jekyll bundler # 使用Powershell jekyll bundler
+gem install jekyll bundler wdm # 使用Powershell jekyll bundler
 jekyll -v  # 验证
 node-vx.x.x-x64.msi
 node -v # 验证
