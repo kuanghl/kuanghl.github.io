@@ -142,6 +142,7 @@ gem install jekyll bundler # sudo apt install jekyll
 # 4. build jekyll-theme-chirpy
 source ~/.rvm/scripts/rvm # 启动ruby
 git clone git@github.com:cotes2020/jekyll-theme-chirpy.git
+# 更改Gemfile的源为source "https://gems.ruby-china.com/"
 bundle
 git config  user.email "kuanghl1998@163.com"
 git config  user.name "kuanghl"
